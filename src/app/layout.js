@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import { Inter } from "next/font/google";
 
 import AuthProvider from "../Components/AuthProvider/AuthProvider";
@@ -12,11 +13,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      
-        <AuthProvider>
-          <body className={inter.className}>{children}</body>
-        </AuthProvider>
-      
+      <head><link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/></head>
+      <AuthProvider>
+        <body className={inter.className}>
+          {children}
+          <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+          <script>AOS.init();</script>
+        </body>
+      </AuthProvider>
     </html>
   );
 }

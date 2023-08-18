@@ -21,7 +21,7 @@ const Stories = () => {
 
   return (
     <div>
-      <div className="flex p-6 bg-white mt-8 border-gray-200 border rounded-xl overflow-x-scroll scrollbar-thin scrollbar-thumb-black">
+      <div className="flex p-6 bg-white border-gray-200 border rounded-xl overflow-x-scroll scrollbar-thin scrollbar-thumb-black lg:mt-32 mt-16">
         {session?.status === "authenticated" && <Story img={session?.data?.user?.image} name ={session?.data?.user?.name} />}
         {statement?.results?.slice(0, 15).map((user) => (
           <Story key={user.name.first} img={user.picture.large} name={user.name.first}/>

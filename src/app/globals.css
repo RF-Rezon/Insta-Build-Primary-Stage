@@ -3,10 +3,46 @@
 @tailwind utilities;
 
 @layer components {
-  .navBtn {
+  /* .navBtn {
     @apply hidden h-5 w-5 md:inline-flex cursor-pointer hover:scale-125 transition-all duration-150 ease-out;
   }
   .btn {
     @apply h-5 w-5 hover:scale-125 cursor-pointer transition-all duration-150 ease-out;
+  } */
+}
+
+.logo {
+  font-family: Comic Sans MS;
+  color: #ffff;
+  font-weight: bold;
+}
+.bee {
+  font-family: sans-serif;
+
+  color: #d8b105;
+}
+
+/* ... your existing styles ... */
+
+/* Position Navbar at the bottom on small screens */
+@media (max-width: 767px) {
+  .myNav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* Adjust the z-index as needed */
+  }
+  .logo {
+    color: rgb(36, 35, 35);
+  }
+
+  .lg\:navbar {
+    justify-content: space-between; /* Adjust alignment as needed */
+    padding-top: 0.5rem; /* Add padding to the top for better visibility */
+    padding-bottom: 0.5rem; /* Add padding to the bottom for spacing */
   }
 }
+
+/* ... more of your existing styles ... */
+
+/* styles.css */
